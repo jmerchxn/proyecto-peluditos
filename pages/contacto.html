@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- link de mi css -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- link de tipografías de letras -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+  <title>Contacto</title>
+</head>
+
+
+<body>
+  <header id="arriba" class="header">
+
+    <div class="logo">
+      <img src="../Imagenes-peluditos/logo peluditos.png" alt="logo de peluditos" height="100">
+      <h1><a href="../index.html" class="logoTitle">¡Rescatando peluditos!</a></h1>
+    </div>
+
+    <!-- navegader de contacto -->
+    <nav>
+      <ul class="navegador">
+        <li>
+          <a href="adopcion.html" class="estilosA"> Adopción </a>
+        </li>
+        <li>
+          <a href="donaciones.html" class="estilosA"> Donaciones </a>
+        </li>
+        <li>
+          <a href="denuncia.html" class="estilosA"> Denuncia </a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <h2>Contactate con nosotros</h2>
+
+    <div class="contContacto">
+      <div class="parrafoContacto">
+        <p class="parrafoContacto">Por favor, dejanos tus datos y tu mensaje a continuación, eligiendo previamente un "asunto / destinatario" según tu consulta.</p>
+        <p class="parrafoContacto">TODOS LOS DATOS SON OBLIGATORIOS.</p>
+      </div>
+
+      <!-- formulario -->
+      <form action="">
+        <fieldset class="formularioEstilo">
+          <legend>Formulario de contacto</legend>
+
+          <div>
+            <label for="Nombre"> Nombre </label>
+            <input type="text" name="Nombre" placeholder="Tu nombre" />
+          </div>
+
+          <div>
+            <label for="Apellido"> Apellido </label>
+            <input type="text" name="Apellido" placeholder="Tu apellido" />
+          </div>
+
+          <div>
+            <label for="Email"> Correo electronico </label>
+            <input type="email" name="Email" placeholder="Tu email" />
+          </div>
+
+          <div>
+            <label for="Celular"> Celular </label>
+            <input type="number" name="Celular" placeholder="Tu celular" />
+          </div>
+
+          <div>
+            <label for="Consulta"> Selecciona el motivo consulta </label>
+            <select name="Consulta" id="">
+              <option value="adopcion">Adopcion</option>
+              <option value="donaciones">Donaciones</option>
+              <option value="denuncia">Denuncia</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div>
+            <input type="reset" value="Borrar" />
+            <input type="submit" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="footer">
+      <div>
+        <a href="#arriba" class="estilosA"> Volver arriba </a>
+      </div>
+
+      <!-- link de ig -->
+      <div class="instagram">
+        <img src="../Imagenes-peluditos/instagram.png" alt="logo de instagram" height="30rem">
+        <a href="https://www.instagram.com/rescatandopeluditos18/" class="estilosA" target="_blank"> Instagram</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
