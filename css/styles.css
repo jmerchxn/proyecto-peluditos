@@ -19,6 +19,7 @@ header{
 /* estilos para el navegador */
 .navbar-nav{
     gap: 50px;
+
 }
 
 .linkNavegador{
@@ -42,7 +43,7 @@ header{
 
 /* interacciones del usuario */
 a:hover{
-    background-color: rgba(71, 48, 17, 0.418);
+    background-color: rgba(202, 166, 119, 0.418);
     border-radius: 1rem;
 }
 
@@ -92,6 +93,8 @@ header nav ul li{
     text-decoration: none;
     display: inline;
     gap: 20px;
+    border: 1.5px solid;
+    border-radius: 1rem;
 
 }
 
