@@ -10,15 +10,21 @@ body{
     background-image: url(../Imagenes-peluditos/BACKGROUND.png);
 }
 
-.header{
+header{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgba(173, 173, 173, 0.291);
+    justify-content: space-evenly;
+}
+/* estilos para el navegador */
+.navbar-nav{
+    gap: 50px;
 }
 
-.navegador{
+.linkNavegador{
     display: flex;
-    gap: 40px;
-    margin-right: 40px;
+    flex-direction: row;
+    align-items: center;
 }
 
 .logo{
@@ -34,6 +40,23 @@ body{
     font-weight: bold;
 }
 
+/* interacciones del usuario */
+a:hover{
+    background-color: rgba(71, 48, 17, 0.418);
+    border-radius: 1rem;
+}
+
+a:link{
+    color: rgb(71, 48, 17);
+}
+a:visited{
+    color: rgb(71, 48, 17);
+}
+
+a:active{
+    color: rgb(255, 255, 255);
+}
+
 /* estilos del footer */
 .footer{
     display: flex;
@@ -41,25 +64,22 @@ body{
     margin: 30px;
 }
 
-.instagram{
-    display: flex;
-}
 
 /* Logo de Rescatando Peluditos en los html de denuncia, conteacto, adopcion y donaciones  */
 .logoTitle{
     font-family: 'Oswald', sans-serif;
-    color:rgba(255, 255, 255, 0.887);
+    color:rgb(255, 255, 255);
     text-decoration: none;
 }
 
 /* Rescatando pelutitos en el index */
 header h1{
     background-color: rgb(71, 48, 17);
-    color: rgba(255, 255, 255, 0.887);
+    color: rgb(237, 246, 255);
     border-radius: 1.2rem;
     padding: 0.5rem;
     margin: 1rem;
-    text-align: start;
+    text-align: center;
     font-size: 2.7rem;
     font-weight: 100;
     font-family: 'Oswald', sans-serif;
@@ -72,6 +92,7 @@ header nav ul li{
     text-decoration: none;
     display: inline;
     gap: 20px;
+
 }
 
 /* estilos del main en index */
@@ -650,7 +671,7 @@ h3{
                             "contenedorListas" 
                             "listaDos"
                             "linkDeLey"
-                            "footer"
+                            "footer";
     }
     
     /* estilos de hijos los hijos */
@@ -794,6 +815,7 @@ h3{
     .parrafoInicio{
         font-size: 1.2rem;
         max-width: 400px;
+        padding: ;
     }
     .videoRescate{
         width: 400px;
@@ -864,7 +886,7 @@ h3{
         grid-template-areas:"hijoIntro"
                             "hijoDinero"
                             "hijoInsumos "
-                            "footer"             
+                            "footer";             
     }
     
     /* propiedades de los hijos donaciones */
@@ -931,7 +953,7 @@ h3{
                             "contenedorListas" 
                             "listaDos"
                             "linkDeLey"
-                            "footer"
+                            "footer";
     }
     
     /* estilos de hijos los hijos */
