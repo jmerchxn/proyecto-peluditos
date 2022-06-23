@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
      <!-- link de mi css -->
-     <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/main.css">
 
     <title>Peluditos</title>
 
@@ -30,31 +30,12 @@
 
         <!-- la imagen es el "logo" -->
 
-        <div class="logo">
+        <div class="header__logo">
             <img src="Imagenes-peluditos/logo peluditos.png" alt="logo de peluditos" height="100">
             <h1>
                 ¡Rescatando peluditos!
             </h1>
         </div>
-
-        <!-- navegador -->
-        <!-- <nav>
-            <ul class="navegador">
-                <li>
-                    <a href="pages/adopcion.html" class="estilosA"> Adopción </a>
-                </li>
-                <li>
-                    <a href="pages/donaciones.html" class="estilosA"> Donaciones </a>
-                </li>
-                <li>
-                    <a href="pages/denuncia.html" class="estilosA"> Denuncia </a>
-                </li>
-                <li>
-                    <a href="pages/contacto.html" class="estilosA"> Contacto </a>
-                </li>
-            </ul>
-        </nav> -->
-      
         <nav class="navegador navbar navbar-expand-lg">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
@@ -109,19 +90,19 @@
     <!-- class de grid -->
     <div class="padreIndex">
         <main>
-            <h2>¿Quiénes somos?</h2>
+            <h2 class="padreIndex__title">¿Quiénes somos?</h2>
 
             <!-- contenido principal del home -->
             <div class="contenidoPrincipal">
                 <div>
-                    <p class="parrafoInicio"> Nuestra historia comienza con un grupo de amigas que encontró una caja y
+                    <p class="contenidoPrincipal__text"> Nuestra historia comienza con un grupo de amigas que encontró una caja y
                         adentro 5 cachorritos de pelo largo. La mejor opción en ese momento fue llevarlos a un
                         veterinario 24hs, ya que no sabíamos en que condición estaban. Esa noche de frio, una de las
                         chicas posteo una foto en Instagram captando el momento escribien un comentario “¡Rescatando
                         Peluditos!”. El amor y compromiso que tuvimos para salvar a esos perritos nos llevó a un paso
                         mas...</p>
 
-                    <p class="parrafoInicio">Hoy en día decidimos fundar el refugio, Rescatando Peluditos, con el
+                    <p class="contenidoPrincipal__text">Hoy en día decidimos fundar el refugio, Rescatando Peluditos, con el
                         objetivo de concientizar a la sociedad. Las ideas que se difunden a través del accionar diario
                         del refugio son las del respeto irrestricto por la vida y la de que el bienestar de los animales
                         se puede lograr si la sociedad se involucra y los sentimientos de piedad se traducen en acciones
@@ -132,7 +113,7 @@
                 </div>
 
                 <!-- video  -->
-                <iframe class="videoRescate" src="https://www.youtube.com/embed/-IYPuUjU8DU"
+                <iframe class="contenidoPrincipal__video" src="https://www.youtube.com/embed/-IYPuUjU8DU"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe></iframe>
@@ -157,23 +138,21 @@
             </div>
 
         </main>
-
-        <footer>
-            <div class="footer">
-                <div>
-                    <a href="#arriba" class="estilosA"> Volver arriba </a>
-                </div>
-
-                <!-- link de ig -->
-                <div class="instagram">
-                    <img src="./Imagenes-peluditos/instagram.png" alt="logo de instagram" height="30rem">
-                    <a href="https://www.instagram.com/rescatandopeluditos18/" class="estilosA" target="_blank">
-                        Instagram</a>
-                </div>
-            </div>
-        </footer>
     </div>
+    <footer class="footer">
 
+        <div>
+            <a href="#arriba" class="estilosA"> Volver arriba </a>
+        </div>
+
+        <!-- link de ig -->
+        <div class="instagram">
+            <img src="./Imagenes-peluditos/instagram.png" alt="logo de instagram" height="30rem">
+            <a href="https://www.instagram.com/rescatandopeluditos18/" class="estilosA" target="_blank">
+                Instagram</a>
+        </div>
+    
+</footer>
 
 </body>
 

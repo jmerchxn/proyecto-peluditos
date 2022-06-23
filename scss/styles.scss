@@ -1,0 +1,123 @@
+$rutaDeImagen: "../Imagenes-peluditos/BACKGROUND.png";
+
+@mixin background($imgpath, $position: 0 0, $repeat: no-repeat) {
+  background: {
+    image: url($imgpath);
+    position: $position;
+  }
+}
+
+body {
+  @include background($rutaDeImagen);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(173, 173, 173, 0.291);
+  justify-content: space-evenly;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navegador {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 0;
+    padding: 0.3rem;
+
+    .navbar-nav {
+      gap: 50px;
+    }
+    .estilosA {
+      font-family: "PT Sans", sans-serif;
+      color: rgb(75, 51, 20);
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .linkNavegador {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .nav-item {
+      border: 1.5px solid;
+      border-radius: 1rem;
+    }
+  }
+}
+
+.padreIndex {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas:
+    "contenidoPrincipal contenidoPrincipal contenidoPrincipal"
+    "contenidoSecundario contenidoSecundario contenidoSecundario"
+    "footer footer footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  &__title {
+    color: rgb(75, 51, 20);
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 2.3rem;
+  }
+  .contenidoPrincipal {
+    grid-area: contenidoPrincipal;
+    justify-self: normal;
+    gap: 2rem;
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    &__text {
+      flex-direction: column;
+      text-align: justify;
+      text-decoration: wavy;
+      font-family: "PT Sans", sans-serif;
+      font-weight: 100;
+      font-size: 1.2rem;
+      width: 700px;
+      line-height: 27px;
+    }
+    &__video {
+      height: 33rem;
+      width: 45rem;
+    }
+  }
+  .contenidoSecundario {
+    grid-area: contenidoSecundario;
+    justify-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+    .antesDespues {
+      font-family: "PT Sans", sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+
+  .estilosA {
+    font-family: "PT Sans", sans-serif;
+    color: rgb(75, 51, 20);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+
