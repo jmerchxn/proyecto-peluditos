@@ -1,7 +1,8 @@
 //variables
 $rutaDeImagen: "../Imagenes-peluditos/BACKGROUND.png";
 $colorPrincipal: rgb(71, 48, 17);
-$colorSecundario: white;
+$colorSecundario: rgb(255, 255, 255);
+$colorTerciario: rgba(255, 255, 255, 0.737);
 
 @mixin background($imgpath, $position: 0 0, $repeat: no-repeat) {
   background: {
@@ -109,7 +110,7 @@ body {
         text-decoration: wavy;
         font-family: "PT Sans", sans-serif;
         font-weight: 100;
-        font-size: 1.2rem;  
+        font-size: 1.2rem;
         line-height: 27px;
       }
     }
@@ -126,6 +127,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     margin-top: 5rem;
+    gap: 2rem;
 
     .antesDespues {
       font-family: "PT Sans", sans-serif;
@@ -192,29 +194,28 @@ body {
       margin: 0px;
       display: flex;
       flex-direction: column;
-      
-      .contenedorTexto{
+
+      .contenedorTexto {
         margin: 1rem;
         padding: 0.5rem;
-      
-      &__text {
-        flex-direction: column;
-        font-weight: 100;
-        font-size: 0.8rem;
+
+        &__text {
+          flex-direction: column;
+          font-weight: 100;
+          font-size: 0.8rem;
+        }
       }
-    }
-    }
       &__video {
-        height: 15rem;
-        width: 18rem;
+        height: 30vh;
+        width: auto;
       }
-    
+    }
 
     .contenidoSecundario {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 1rem;
+      margin-top: 6rem;
 
       .antesYDsp {
         width: 18rem;
@@ -270,14 +271,14 @@ body {
       font-size: 2rem;
     }
 
-    .contenidoPrincipal{  
+    .contenidoPrincipal {
       display: flex;
       flex-direction: column;
 
-      .contenedorTexto{
+      .contenedorTexto {
         margin: 1rem;
         padding: 0.5rem;
-        
+
         &__text {
           flex-direction: column;
           font-weight: 100;
@@ -291,50 +292,232 @@ body {
       }
     }
 
-    .contenidoSecundario{
+    .contenidoSecundario {
       flex-direction: column;
 
-      .antesYDsp{
+      .antesYDsp {
         width: 100%;
         height: 15rem;
       }
     }
   }
-}  
+}
 
 //media queries pantallas desktop
 @media (min-width: 1024px) and (max-width: 1920px) {
-
   //MEDIA QUERIES GLOBAL
-  .header{
+  .header {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
 
-    &__title{
+    &__title {
       font-size: 2rem;
       font-weight: 100;
     }
 
-    .navegador{
+    .navegador {
       padding: 1rem;
 
-      .navbar-nav{
+      .navbar-nav {
         gap: 20px;
       }
     }
   }
 
-  .padreIndex{
+  .padreIndex {
     display: flex;
     flex-direction: column;
 
-    .contenidoPrincipal{
-      display:flex;
+    .contenidoPrincipal {
+      display: flex;
       flex-wrap: wrap;
+      gap: 1rem;
 
-      .contenedorTextop{
+      .contenedorTexto {
+        max-width: 40%;
+      }
+      &__video {
+        padding: 0.5rem;
+        width: 40%;
+        height: 38vh;
+        align-self: center;
+      }
+    }
+
+    .contenidoSecundario {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+/*SCSS ADOPCION */
+.header {
+  &__link {
+    text-decoration: none;
+  }
+}
+
+.padreAdopcion {
+  display: grid;
+  grid-template-areas:
+    "introAdopciones introAdopciones"
+    "contenedorDeFotos contenedorDeFotos"
+    "footer footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  .introAdopciones {
+    grid-area: introAdopciones;
+    justify-self: center;
+
+    .tituloAdopciones {
+      color: rgb(75, 51, 20);
+      text-align: center;
+      font-family: "Oswald", sans-serif;
+      font-size: 2.3rem;
+    }
+    .parraAdopciones {
+      text-align: center;
+      font-family: "PT Sans", sans-serif;
+      font-weight: 100;
+      font-size: 1.2rem;
+      width: 100%;
+      padding: 40px;
+      background-color: $colorTerciario;
+    }
+  }
+
+  .contenedorDeFotos {
+    grid-area: contenedorDeFotos;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .mascota {
+      display: flex;
+      flex-direction: row;
+      max-width: 48%;
+      background-color: $colorSecundario;
+      border: 1px solid black;
+      border-radius: 1rem;
+      padding: 1rem;
+      gap: 1rem;
+
+      &__img {
+        width: 40%;
+        height: 30vh;
+        align-self: center;
+      }
+
+      &__contenidoTexto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        .parrafoAdopciones {
+          align-self: center;
+          text-align: justify;
+        }
+        .linkMascota {
+          background-color: $colorPrincipal;
+          text-decoration: none;
+          font-size: 1.2rem;
+          color: $colorSecundario;
+          border-radius: 0.5rem;
+          width: 100%;
+          height: 2.3rem;
+          text-align: center;
+
+          &:hover {
+            background-color: rgb(87, 60, 24);
+            font-weight: 500;
+            color: $colorSecundario;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    grid-area: footer;
+  }
+}
+
+/*MEDIA QUERIES ADOPCION*/
+//media queries para celular
+
+@media (max-width: 480px) and (min-width: 320px) {
+  .padreAdopcion {
+    grid-template-areas:
+      "introAdopciones"
+      "contenedorDeFotos"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    .introAdopciones {
+      .tituloAdopciones {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .parraAdopciones {
+        font-size: 1rem;
+      }
+    }
+
+    .contenedorDeFotos {
+      flex-direction: column;
+
+      .mascota {
+        flex-direction: column;
+        max-width: 70%;
+
+        &__img {
+          width: 100%;
+        }
+
+        &__contenidoTexto {
+          .parrafoAdopciones {
+            font-size: 0.8rem;
+          }
+          .linkMascota {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .footer {
+      grid-area: footer;
+    }
+  }
+}
+
+//media queries tablets
+@media (min-width: 481px) and (max-width: 1024px) {
+  .padreAdopcion {
+    .introAdopciones {
+      .tituloAdopciones {
+        font-size: 2rem;
+      }
+      .parraAdopciones{
+        font-size: 1.2rem;
+      }
+    }
+
+    .contenedorDeFotos{
+      .mascota{
+        flex-direction: column;
         max-width: 50%;
-        background-color: red;
+
+        &__img{
+          max-width: 100%;
+          height: 21vh;
+        }
       }
     }
   }

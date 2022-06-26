@@ -46,7 +46,7 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-areas: "contenidoPrincipal contenidoPrincipal contenidoPrincipal" "contenidoSecundario contenidoSecundario contenidoSecundario" "footer footer footer";
+  grid-template-areas: "contenidoPrincipal contenidoPrincipal contenidoPrincipal" "contenidoSecundario contenidoSecundario contenidoSecundario" "footer footer footer";
   grid-template-columns: 1fr;
   grid-template-rows: auto; }
   .padreIndex__title {
@@ -84,7 +84,8 @@ body {
     justify-self: center;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 5rem; }
+    margin-top: 5rem;
+    gap: 2rem; }
     .padreIndex .contenidoSecundario .antesDespues {
       font-family: "PT Sans", sans-serif;
       font-weight: bold;
@@ -138,14 +139,14 @@ body {
           flex-direction: column;
           font-weight: 100;
           font-size: 0.8rem; }
-    .padreIndex__video {
-      height: 15rem;
-      width: 18rem; }
+      .padreIndex .contenidoPrincipal__video {
+        height: 30vh;
+        width: auto; }
     .padreIndex .contenidoSecundario {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 1rem; }
+      margin-top: 6rem; }
       .padreIndex .contenidoSecundario .antesYDsp {
         width: 18rem;
         height: 11rem; }
@@ -214,7 +215,122 @@ body {
     flex-direction: column; }
     .padreIndex .contenidoPrincipal {
       display: flex;
-      flex-wrap: wrap; }
-      .padreIndex .contenidoPrincipal .contenedorTextop {
-        max-width: 50%;
-        background-color: red; } }
+      flex-wrap: wrap;
+      gap: 1rem; }
+      .padreIndex .contenidoPrincipal .contenedorTexto {
+        max-width: 40%; }
+      .padreIndex .contenidoPrincipal__video {
+        padding: 0.5rem;
+        width: 40%;
+        height: 38vh;
+        align-self: center; }
+    .padreIndex .contenidoSecundario {
+      flex-wrap: wrap; } }
+
+/*SCSS ADOPCION */
+.header__link {
+  text-decoration: none; }
+
+.padreAdopcion {
+  display: grid;
+  grid-template-areas: "introAdopciones introAdopciones" "contenedorDeFotos contenedorDeFotos" "footer footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto; }
+  .padreAdopcion .introAdopciones {
+    grid-area: introAdopciones;
+    justify-self: center; }
+    .padreAdopcion .introAdopciones .tituloAdopciones {
+      color: #4b3314;
+      text-align: center;
+      font-family: "Oswald", sans-serif;
+      font-size: 2.3rem; }
+    .padreAdopcion .introAdopciones .parraAdopciones {
+      text-align: center;
+      font-family: "PT Sans", sans-serif;
+      font-weight: 100;
+      font-size: 1.2rem;
+      width: 100%;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.737); }
+  .padreAdopcion .contenedorDeFotos {
+    grid-area: contenedorDeFotos;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3rem; }
+    .padreAdopcion .contenedorDeFotos .mascota {
+      display: flex;
+      flex-direction: row;
+      max-width: 48%;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 1rem;
+      padding: 1rem;
+      gap: 1rem; }
+      .padreAdopcion .contenedorDeFotos .mascota__img {
+        width: 40%;
+        height: 30vh;
+        align-self: center; }
+      .padreAdopcion .contenedorDeFotos .mascota__contenidoTexto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; }
+        .padreAdopcion .contenedorDeFotos .mascota__contenidoTexto .parrafoAdopciones {
+          align-self: center;
+          text-align: justify; }
+        .padreAdopcion .contenedorDeFotos .mascota__contenidoTexto .linkMascota {
+          background-color: #473011;
+          text-decoration: none;
+          font-size: 1.2rem;
+          color: white;
+          border-radius: 0.5rem;
+          width: 100%;
+          height: 2.3rem;
+          text-align: center; }
+          .padreAdopcion .contenedorDeFotos .mascota__contenidoTexto .linkMascota:hover {
+            background-color: #573c18;
+            font-weight: 500;
+            color: white; }
+  .padreAdopcion .footer {
+    grid-area: footer; }
+
+/*MEDIA QUERIES ADOPCION*/
+@media (max-width: 480px) and (min-width: 320px) {
+  .padreAdopcion {
+    grid-template-areas: "introAdopciones" "contenedorDeFotos" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; }
+    .padreAdopcion .introAdopciones .tituloAdopciones {
+      margin-top: 1rem;
+      font-size: 1.5rem; }
+    .padreAdopcion .introAdopciones .parraAdopciones {
+      font-size: 1rem; }
+    .padreAdopcion .contenedorDeFotos {
+      flex-direction: column; }
+      .padreAdopcion .contenedorDeFotos .mascota {
+        flex-direction: column;
+        max-width: 70%; }
+        .padreAdopcion .contenedorDeFotos .mascota__img {
+          width: 100%; }
+        .padreAdopcion .contenedorDeFotos .mascota__contenidoTexto .parrafoAdopciones {
+          font-size: 0.8rem; }
+        .padreAdopcion .contenedorDeFotos .mascota__contenidoTexto .linkMascota {
+          font-size: 1rem; }
+    .padreAdopcion .footer {
+      grid-area: footer; } }
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .padreAdopcion .introAdopciones .tituloAdopciones {
+    font-size: 2rem; }
+  .padreAdopcion .introAdopciones .parraAdopciones {
+    font-size: 1.2rem; }
+  .padreAdopcion .contenedorDeFotos .mascota {
+    flex-direction: column;
+    max-width: 50%; }
+    .padreAdopcion .contenedorDeFotos .mascota__img {
+      max-width: 100%;
+      height: 21vh; } }
