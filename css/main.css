@@ -42,13 +42,14 @@ body {
       border: 1.5px solid;
       border-radius: 1rem; }
 
+/*estilos del index*/
 .padreIndex {
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-areas: "contenidoPrincipal contenidoPrincipal contenidoPrincipal" "contenidoSecundario contenidoSecundario contenidoSecundario" "footer footer footer";
   grid-template-columns: 1fr;
-  grid-template-rows: auto; }
+  grid-template-rows: auto auto auto; }
   .padreIndex__title {
     color: #4b3314;
     text-align: center;
@@ -227,7 +228,7 @@ body {
     .padreIndex .contenidoSecundario {
       flex-wrap: wrap; } }
 
-/*SCSS ADOPCION */
+/*estilos ADOPCION */
 .header__link {
   text-decoration: none; }
 
@@ -235,7 +236,7 @@ body {
   display: grid;
   grid-template-areas: "introAdopciones introAdopciones" "contenedorDeFotos contenedorDeFotos" "footer footer";
   grid-template-columns: 1fr;
-  grid-template-rows: auto; }
+  grid-template-rows: auto auto auto; }
   .padreAdopcion .introAdopciones {
     grid-area: introAdopciones;
     justify-self: center; }
@@ -334,3 +335,273 @@ body {
     .padreAdopcion .contenedorDeFotos .mascota__img {
       max-width: 100%;
       height: 21vh; } }
+
+/*estilos DONACIONES*/
+.padreDonaciones {
+  display: grid;
+  grid-template-areas: "hijoIntro" "hijoDinero" "hijoInsumo" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto; }
+  .padreDonaciones .hijoIntro {
+    justify-self: center;
+    grid-area: hijoIntro; }
+    .padreDonaciones .hijoIntro__title {
+      color: #4b3314;
+      text-align: center;
+      font-family: "Oswald", sans-serif;
+      font-size: 2.3rem; }
+    .padreDonaciones .hijoIntro .parrafoDonaciones {
+      text-align: center;
+      font-family: 'PT Sans', sans-serif;
+      font-weight: 100;
+      font-size: 1.2rem;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.737); }
+  .padreDonaciones .hijoDinero {
+    grid-area: hijoDinero;
+    justify-self: center; }
+    .padreDonaciones .hijoDinero__title {
+      color: #473011;
+      text-align: center;
+      font-family: "Oswald", sans-serif;
+      font-size: 2.3rem; }
+    .padreDonaciones .hijoDinero .linksDePago {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      margin-top: 1rem; }
+      .padreDonaciones .hijoDinero .linksDePago .imagenA {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem; }
+        .padreDonaciones .hijoDinero .linksDePago .imagenA .logos {
+          height: 2.7rem; }
+      .padreDonaciones .hijoDinero .linksDePago .estilosA {
+        font-family: "PT Sans", sans-serif;
+        color: #473011;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold; }
+  .padreDonaciones .hijoInsumos {
+    grid-area: hijoInsumos;
+    justify-self: center; }
+    .padreDonaciones .hijoInsumos__title {
+      color: #473011;
+      text-align: center;
+      font-family: "Oswald", sans-serif;
+      font-size: 2.3rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem; }
+    .padreDonaciones .hijoInsumos .insumos {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly; }
+    .padreDonaciones .hijoInsumos .listaInsumo {
+      font-size: 1.2rem;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.737);
+      border: 1px solid black;
+      border-radius: 1rem;
+      width: 30%; }
+      .padreDonaciones .hijoInsumos .listaInsumo__title {
+        color: #473011;
+        text-align: center;
+        font-family: "PT Sans", sans-serif;
+        font-size: 2rem;
+        text-decoration: underline; }
+  .padreDonaciones .footer {
+    grid-area: footer;
+    justify-self: normal; }
+
+/*MEDIA QUERIES DONACIONES*/
+@media (max-width: 480px) and (min-width: 320px) {
+  .padreDonaciones .hijoIntro__title {
+    font-size: 1.5rem;
+    margin-top: 1rem; }
+  .padreDonaciones .hijoIntro .parrafoDonaciones {
+    font-size: 1rem;
+    padding: 2rem; }
+  .padreDonaciones .hijoDinero__title {
+    font-size: 1.5rem;
+    margin-top: 1rem; }
+  .padreDonaciones .hijoDinero .linksDePago .imagenA .logos {
+    height: 1.2rem;
+    width: 5rem; }
+  .padreDonaciones .hijoDinero .linksDePago .imagenA .estilosA {
+    font-size: 0.8rem; }
+  .padreDonaciones .hijoInsumos__title {
+    font-size: 1.5rem;
+    margin-top: 1rem; }
+  .padreDonaciones .hijoInsumos .insumos {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; }
+    .padreDonaciones .hijoInsumos .insumos .listaInsumo {
+      font-size: 1rem;
+      width: 90%; }
+      .padreDonaciones .hijoInsumos .insumos .listaInsumo__title {
+        font-size: 1.2rem; } }
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .padreDonaciones .hijoDinero .linksDePago .imagenA .logos {
+    height: 2.5rem;
+    width: 10rem; }
+  .padreDonaciones .hijoDinero .linksDePago .imagenA .estilosA {
+    font-size: 1.1rem; }
+  .padreDonaciones .hijoInsumos .insumos {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; }
+    .padreDonaciones .hijoInsumos .insumos .listaInsumo {
+      width: 85%; } }
+
+/*ESTILOS DENUNCIA*/
+.header__link {
+  text-decoration: none; }
+
+.padreDenuncia {
+  display: grid;
+  grid-template-areas: "hijoDenuncia" "contenedorListas" "linkDeLey" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto; }
+  .padreDenuncia .hijoDenuncia {
+    grid-area: hijoDenuncia;
+    justify-self: center; }
+    .padreDenuncia .hijoDenuncia__title {
+      color: #473011;
+      text-align: center;
+      font-family: "Oswald", sans-serif;
+      font-size: 2.3rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem; }
+    .padreDenuncia .hijoDenuncia .parrafoDenuncia {
+      font-family: "PT Sans", sans-serif;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      background-color: rgba(255, 255, 255, 0.737); }
+  .padreDenuncia .contenedorListas {
+    grid-area: contenedorListas;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .padreDenuncia .contenedorListas .lista {
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 1rem;
+      font-size: 1.2rem;
+      line-height: 2.2rem;
+      text-align: justify;
+      padding: 1rem;
+      max-width: 40%; }
+  .padreDenuncia .linkDeLey {
+    justify-self: center;
+    grid-area: linkDeLey;
+    align-items: center; }
+    .padreDenuncia .linkDeLey__title {
+      text-align: center;
+      margin: 1rem; }
+      .padreDenuncia .linkDeLey__title .estilosA {
+        font-family: "PT Sans", sans-serif;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #473011;
+        padding: 1rem;
+        border-radius: 1rem; }
+      .padreDenuncia .linkDeLey__title .estilosA:hover {
+        background-color: #573c18;
+        font-weight: 100; }
+  .padreDenuncia .footer {
+    grid-area: footer; }
+
+/*MEDIA QUERIES DENUNCIA*/
+@media (max-width: 480px) and (min-width: 320px) {
+  .padreDenuncia .hijoDenuncia__title {
+    font-size: 1.5rem; }
+  .padreDenuncia .hijoDenuncia .parrafoDenuncia {
+    font-size: 1rem; }
+  .padreDenuncia .contenedorListas {
+    flex-direction: column;
+    align-items: center; }
+    .padreDenuncia .contenedorListas .lista {
+      font-size: 1rem;
+      max-width: 80%; }
+  .padreDenuncia .linkDeLey__title .estilosA {
+    font-size: 1rem; } }
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .padreDenuncia .contenedorListas {
+    flex-direction: column;
+    align-items: center; }
+    .padreDenuncia .contenedorListas .lista {
+      max-width: 80%; } }
+
+/*ESTILOS DE CONTACTO*/
+.header__link {
+  text-decoration: none; }
+
+.contContacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .contContacto__title {
+    color: #473011;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 2.3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem; }
+  .contContacto .parrafoContacto {
+    background-color: rgba(255, 255, 255, 0.737);
+    padding: 1rem; }
+    .contContacto .parrafoContacto .introContacto {
+      text-align: center;
+      font-family: 'PT Sans', sans-serif;
+      font-weight: bold;
+      font-size: 1.2rem; }
+  .contContacto .formulario {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.579);
+    background-color: rgba(143, 114, 85, 0.658);
+    border-radius: 1rem;
+    width: 40%; }
+    .contContacto .formulario .formularioEstilo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      font-weight: bold; }
+      .contContacto .formulario .formularioEstilo__title {
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold; }
+      .contContacto .formulario .formularioEstilo .imagenLogo {
+        width: 30%; }
+    .contContacto .formulario .contenidoFormulario {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; }
+    .contContacto .formulario .boton, .contContacto .formulario .boton--borrar, .contContacto .formulario .boton--enviar {
+      width: 30%;
+      border-radius: 10px; }
+    .contContacto .formulario .boton--borrar:hover {
+      background-color: rgba(255, 0, 0, 0.591); }
+    .contContacto .formulario .boton--enviar:hover {
+      background-color: #72ba72; }
+
+/*MEDIA QUERIES CONTACATO*/
+@media (max-width: 480px) and (min-width: 320px) {
+  .contContacto__title {
+    font-size: 1.5rem; }
+  .contContacto .parrafoContacto .introContacto {
+    font-size: 1rem; }
+  .contContacto .formulario {
+    width: 85%; } }
