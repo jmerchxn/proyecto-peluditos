@@ -99,60 +99,63 @@
   </header>
 
   <main>
+    
     <div class="contContacto">
-
       <h2 class="contContacto__title">Contactate con nosotros</h2>
-      <div class="parrafoContacto">
-        <p class="introContacto">Por favor, dejanos tus datos y tu mensaje a continuación, eligiendo previamente un "asunto / destinatario" según tu consulta.</p>
-        <p class="introContacto">TODOS LOS DATOS SON OBLIGATORIOS.</p>
-      </div>
-
-      <!-- formulario -->
-      <form action="" class="formulario">
-        <fields>
-          <div class="formularioEstilo">
-            <legend class="formularioEstilo__title">Formulario de consulta</legend>
-            <img src="../Imagenes-peluditos/logo peluditos.png" alt="logo de peluditos" height="100" class="imagenLogo">
-          </div>
-          
-          <div class="contenidoFormulario">
-            <div>
-              <label for="Nombre"> Nombre </label>
-              <input type="text" name="Nombre" placeholder="Tu nombre" />
-            </div>
-  
-            <div>
-              <label for="Apellido"> Apellido </label>
-              <input type="text" name="Apellido" placeholder="Tu apellido" />
-            </div>
-  
-            <div>
-              <label for="Email"> Correo electronico </label>
-              <input type="email" name="Email" placeholder="Tu email" />
-            </div>
-  
-            <div>
-              <label for="Celular"> Celular </label>
-              <input type="number" name="Celular" placeholder="Tu celular" />
-            </div> 
-        
-            <div>
-              <label for="Consulta"> Selecciona el motivo consulta </label>
-              <select name="Consulta" id="">
-                <option value="adopcion">Adopcion</option>
-                <option value="donaciones">Donaciones</option>
-               <option value="denuncia">Denuncia</option>
-               <option value="otro">Otro</option>
-              </select>
-            </div>
-          </div>
-        <div>
-          <input class="boton boton--borrar" type="reset" value="Borrar" />
-          <input class="boton boton--enviar" type="submit" />
+      <div class="textoImg">
+        <div class="parrafoContacto">
+          <p class="introContacto">Por favor, dejanos tus datos y tu mensaje a continuación, eligiendo previamente un "asunto / destinatario" según tu consulta.</p>
+          <p class="introContacto">TODOS LOS DATOS SON OBLIGATORIOS.  </p>
+          <img src="../Imagenes-peluditos/imagen refugio.jpeg" alt="Imagen del refugio" class="imgRefugio">
         </div>
-      </fields>
-      </form>
-    </div>
+      
+        <!-- formulario -->
+        <form action="" class="formulario">
+          <fields class="fields">
+            <div class="formularioEstilo">
+              <legend class="formularioEstilo__title">Formulario de consulta</legend>
+              <img src="../Imagenes-peluditos/logo peluditos.png" alt="logo de peluditos" height="100" class="imagenLogo">
+            </div>
+          
+            <div class="contenidoFormulario">
+              <div>
+                <label for="Nombre" class="contenido"> Nombre </label>
+                <input type="text" name="Nombre" placeholder="Tu nombre" />
+              </div>
+  
+              <div>
+                <label for="Apellido" class="contenido"> Apellido </label>
+                <input type="text" name="Apellido" placeholder="Tu apellido" />
+              </div>
+  
+              <div>
+                <label for="Email" class="contenido"> Correo electronico </label>
+                <input type="email" name="Email" placeholder="Tu email" />
+              </div>
+  
+              <div>
+                <label for="Celular" class="contenido"> Celular </label>
+                <input type="number" name="Celular" placeholder="Tu celular" />
+              </div> 
+        
+              <div>
+                <label for="Consulta" class="contenido"> Selecciona el motivo consulta </label>
+                <select name="Consulta" id="">
+                  <option value="adopcion">Adopcion</option>
+                  <option value="donaciones">Donaciones</option>
+                 <option value="denuncia">Denuncia</option>
+                 <option value="otro">Otro</option>
+                </select>
+              </div>
+            </div>
+          <div>
+            <input class="boton boton--borrar" type="reset" value="Borrar" />
+            <input class="boton boton--enviar" type="submit" />
+          </div>
+        </fields>
+       </form>
+      </div>
+    </div>  
   </main>
 
 

@@ -557,51 +557,88 @@ body {
     font-size: 2.3rem;
     margin-top: 3rem;
     margin-bottom: 3rem; }
-  .contContacto .parrafoContacto {
-    background-color: rgba(255, 255, 255, 0.737);
+  .contContacto .textoImg {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
     padding: 1rem; }
-    .contContacto .parrafoContacto .introContacto {
-      text-align: center;
-      font-family: 'PT Sans', sans-serif;
-      font-weight: bold;
-      font-size: 1.2rem; }
+    .contContacto .textoImg .parrafoContacto {
+      background-color: rgba(255, 255, 255, 0.737);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .contContacto .textoImg .parrafoContacto .introContacto {
+        text-align: center;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        font-size: 1.2rem; }
+      .contContacto .textoImg .parrafoContacto .imgRefugio {
+        width: 70%; }
   .contContacto .formulario {
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    padding-bottom: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.579);
     background-color: rgba(143, 114, 85, 0.658);
     border-radius: 1rem;
     width: 40%; }
-    .contContacto .formulario .formularioEstilo {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.2rem;
-      font-weight: bold; }
-      .contContacto .formulario .formularioEstilo__title {
-        font-family: 'PT Sans', sans-serif;
-        font-weight: bold; }
-      .contContacto .formulario .formularioEstilo .imagenLogo {
-        width: 30%; }
-    .contContacto .formulario .contenidoFormulario {
+    .contContacto .formulario .fields {
       display: flex;
       flex-direction: column;
-      gap: 1rem; }
-    .contContacto .formulario .boton, .contContacto .formulario .boton--borrar, .contContacto .formulario .boton--enviar {
-      width: 30%;
-      border-radius: 10px; }
-    .contContacto .formulario .boton--borrar:hover {
-      background-color: rgba(255, 0, 0, 0.591); }
-    .contContacto .formulario .boton--enviar:hover {
-      background-color: #72ba72; }
+      justify-content: space-between; }
+      .contContacto .formulario .fields .formularioEstilo {
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        .contContacto .formulario .fields .formularioEstilo__title {
+          font-family: 'PT Sans', sans-serif;
+          font-weight: bold; }
+        .contContacto .formulario .fields .formularioEstilo .imagenLogo {
+          width: 30%; }
+      .contContacto .formulario .fields .contenidoFormulario {
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        justify-content: space-between; }
+      .contContacto .formulario .fields .contenido {
+        font-size: 1.5rem; }
+      .contContacto .formulario .fields .boton, .contContacto .formulario .fields .boton--borrar, .contContacto .formulario .fields .boton--enviar {
+        width: 30%;
+        border-radius: 10px; }
+      .contContacto .formulario .fields .boton--borrar:hover {
+        background-color: rgba(255, 0, 0, 0.591); }
+      .contContacto .formulario .fields .boton--enviar:hover {
+        background-color: #72ba72; }
 
 /*MEDIA QUERIES CONTACATO*/
 @media (max-width: 480px) and (min-width: 320px) {
   .contContacto__title {
     font-size: 1.5rem; }
-  .contContacto .parrafoContacto .introContacto {
-    font-size: 1rem; }
-  .contContacto .formulario {
-    width: 85%; } }
+  .contContacto .textoImg {
+    flex-direction: column;
+    align-items: center; }
+    .contContacto .textoImg .parrafoContacto .introContacto {
+      font-size: 1rem; }
+    .contContacto .textoImg .formulario {
+      width: 85%;
+      padding: 0.3rem;
+      height: 50vh; }
+      .contContacto .textoImg .formulario .contenidoFormulario {
+        height: 70%;
+        justify-content: space-between; }
+      .contContacto .textoImg .formulario .contenido {
+        font-size: 1rem; } }
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .contContacto .textoImg {
+    flex-direction: column;
+    align-items: center; }
+    .contContacto .textoImg .formulario {
+      padding: 0.7rem;
+      width: 80%;
+      height: 65vh; }
+    .contContacto .textoImg .contenidoFormulario {
+      justify-content: space-between; }
+    .contContacto .textoImg .contenido {
+      font-size: 1.3rem; } }
