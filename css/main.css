@@ -5,27 +5,34 @@ body {
 .header {
   display: flex;
   flex-direction: row;
-  background-color: rgba(173, 173, 173, 0.291);
+  background-color: rgba(214, 214, 214, 0.721);
   justify-content: space-evenly; }
-  .header__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .header__title {
-    background-color: #473011;
-    color: white;
-    border-radius: 1.2rem;
-    padding: 0.5rem;
-    margin: 1rem;
-    text-align: center;
-    font-size: 2.7rem;
-    font-weight: 100;
-    font-family: "Oswald", sans-serif; }
   .header .navegador {
     display: flex;
     gap: 0.5rem;
     margin-right: 0;
-    padding: 0.3rem; }
+    padding: 0.3rem;
+    width: 100%;
+    justify-content: space-evenly; }
+    .header .navegador__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .header .navegador .navbar-toggler {
+      color: beige;
+      background-color: #473011c2; }
+    .header .navegador__title {
+      background-color: #473011;
+      color: white;
+      border-radius: 1.2rem;
+      padding: 0.5rem;
+      margin: 1rem;
+      text-align: center;
+      font-size: 2.7rem;
+      font-weight: 100;
+      font-family: "Oswald", sans-serif; }
+    .header .navegador .navbar-collapse {
+      justify-content: end; }
     .header .navegador .navbar-nav {
       gap: 50px; }
     .header .navegador .estilosA {
@@ -41,13 +48,15 @@ body {
     .header .navegador .nav-item {
       border: 1.5px solid;
       border-radius: 1rem; }
+      .header .navegador .nav-item:hover {
+        background-color: rgba(199, 190, 179, 0.86); }
 
 /*estilos del index*/
 .padreIndex {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-areas: "contenidoPrincipal contenidoPrincipal contenidoPrincipal" "contenidoSecundario contenidoSecundario contenidoSecundario" "footer footer footer";
+  grid-template-areas: "contenidoPrincipal contenidoPrincipal contenidoPrincipal" "contenidoSecundario contenidoSecundario contenidoSecundario" "footer footer footer";
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto; }
   .padreIndex__title {
@@ -70,13 +79,11 @@ body {
       margin: 0.2rem;
       padding: 0.5rem; }
       .padreIndex .contenidoPrincipal .contenedorTexto__text {
-        flex-direction: column;
         text-align: justify;
         text-decoration: wavy;
         font-family: "PT Sans", sans-serif;
         font-weight: 100;
-        font-size: 1.2rem;
-        line-height: 27px; }
+        font-size: 1.2rem; }
     .padreIndex .contenidoPrincipal__video {
       height: auto;
       width: auto; }
@@ -113,13 +120,17 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center; }
-    .header__title {
+    .header .navegador__logo {
+      width: 60%; }
+    .header .navegador__title {
       font-size: 1.4rem;
       font-weight: 100; }
-    .header .navegador {
-      padding: 0.3rem; }
-      .header .navegador .estilosA {
-        font-size: 1rem; }
+    .header .navegador .navbar-nav {
+      gap: 0.1rem; }
+      .header .navegador .navbar-nav .nav-item {
+        border: 0; }
+    .header .navegador .estilosA {
+      font-size: 1rem; }
   /* media queries del index */
   .padreIndex {
     display: flex;
@@ -164,13 +175,18 @@ body {
   .header {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly; }
-    .header__title {
-      font-size: 2rem;
-      font-weight: 100; }
+    align-items: center; }
     .header .navegador {
-      padding: 0.5rem; }
+      width: 100%; }
+      .header .navegador__logo {
+        width: 60%; }
+      .header .navegador__title {
+        font-size: 2rem;
+        font-weight: 100; }
+      .header .navegador .navbar-nav {
+        gap: 0.1rem; }
+        .header .navegador .navbar-nav .nav-item {
+          border: 0; }
       .header .navegador .estilosA {
         font-size: 1rem; }
   /* media queries del index */
@@ -189,7 +205,7 @@ body {
         .padreIndex .contenidoPrincipal .contenedorTexto__text {
           flex-direction: column;
           font-weight: 100;
-          font-size: 2rem; }
+          font-size: 1rem; }
       .padreIndex .contenidoPrincipal__video {
         width: 100%;
         height: 26rem;
@@ -205,7 +221,7 @@ body {
     display: flex;
     flex-direction: row; }
     .header__title {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 100; }
     .header .navegador {
       padding: 1rem; }
@@ -234,7 +250,7 @@ body {
 
 .padreAdopcion {
   display: grid;
-  grid-template-areas: "introAdopciones introAdopciones" "contenedorDeFotos contenedorDeFotos" "footer footer";
+  grid-template-areas: "introAdopciones introAdopciones" "contenedorDeFotos contenedorDeFotos" "footer footer";
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto; }
   .padreAdopcion .introAdopciones {
@@ -302,7 +318,7 @@ body {
 /*MEDIA QUERIES ADOPCION*/
 @media (max-width: 480px) and (min-width: 320px) {
   .padreAdopcion {
-    grid-template-areas: "introAdopciones" "contenedorDeFotos" "footer";
+    grid-template-areas: "introAdopciones" "contenedorDeFotos" "footer";
     grid-template-columns: 1fr;
     grid-template-rows: auto; }
     .padreAdopcion .introAdopciones .tituloAdopciones {
@@ -339,7 +355,7 @@ body {
 /*estilos DONACIONES*/
 .padreDonaciones {
   display: grid;
-  grid-template-areas: "hijoIntro" "hijoDinero" "hijoInsumo" "footer";
+  grid-template-areas: "hijoIntro" "hijoDinero" "hijoInsumo" "footer";
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto; }
   .padreDonaciones .hijoIntro {
@@ -379,10 +395,18 @@ body {
           height: 2.7rem; }
       .padreDonaciones .hijoDinero .linksDePago .estilosA {
         font-family: "PT Sans", sans-serif;
-        color: #473011;
+        color: white;
         text-decoration: none;
-        font-size: 20px;
-        font-weight: bold; }
+        font-weight: bold;
+        background-color: #473011;
+        font-size: 1.2rem;
+        border-radius: 1rem;
+        text-align: center;
+        padding: 1rem; }
+        .padreDonaciones .hijoDinero .linksDePago .estilosA:hover {
+          background-color: #573c18;
+          font-weight: 500;
+          color: white; }
   .padreDonaciones .hijoInsumos {
     grid-area: hijoInsumos;
     justify-self: center; }
@@ -462,7 +486,7 @@ body {
 
 .padreDenuncia {
   display: grid;
-  grid-template-areas: "hijoDenuncia" "contenedorListas" "linkDeLey" "footer";
+  grid-template-areas: "hijoDenuncia" "contenedorListas" "linkDeLey" "footer";
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto; }
   .padreDenuncia .hijoDenuncia {
@@ -572,7 +596,7 @@ body {
         text-align: center;
         font-family: 'PT Sans', sans-serif;
         font-weight: bold;
-        font-size: 1.2rem; }
+        font-size: 1.5rem; }
       .contContacto .textoImg .parrafoContacto .imgRefugio {
         width: 70%; }
   .contContacto .formulario {
@@ -580,7 +604,7 @@ body {
     justify-content: center;
     padding-bottom: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.579);
-    background-color: rgba(143, 114, 85, 0.658);
+    background-color: white;
     border-radius: 1rem;
     width: 40%; }
     .contContacto .formulario .fields {
@@ -592,8 +616,10 @@ body {
         flex-direction: row;
         align-items: center; }
         .contContacto .formulario .fields .formularioEstilo__title {
-          font-family: 'PT Sans', sans-serif;
-          font-weight: bold; }
+          font-family: "Oswald", sans-serif;
+          color: #473011;
+          font-weight: bold;
+          font-size: 2rem; }
         .contContacto .formulario .fields .formularioEstilo .imagenLogo {
           width: 30%; }
       .contContacto .formulario .fields .contenidoFormulario {
@@ -601,8 +627,11 @@ body {
         flex-direction: column;
         height: 70%;
         justify-content: space-between; }
+        .contContacto .formulario .fields .contenidoFormulario .espacioRellenar {
+          display: flex;
+          flex-direction: column; }
       .contContacto .formulario .fields .contenido {
-        font-size: 1.5rem; }
+        font-size: 1.2rem; }
       .contContacto .formulario .fields .boton, .contContacto .formulario .fields .boton--borrar, .contContacto .formulario .fields .boton--enviar {
         width: 30%;
         border-radius: 10px; }
@@ -619,11 +648,17 @@ body {
     flex-direction: column;
     align-items: center; }
     .contContacto .textoImg .parrafoContacto .introContacto {
-      font-size: 1rem; }
+      font-size: 1.2rem;
+      padding: 0;
+      margin: 0; }
     .contContacto .textoImg .formulario {
       width: 85%;
       padding: 0.3rem;
-      height: 50vh; }
+      height: 75vh; }
+      .contContacto .textoImg .formulario .fields .formularioEstilo__title {
+        font-size: 1.4rem; }
+      .contContacto .textoImg .formulario .fields .formularioEstilo .imagenLogo {
+        width: 30%; }
       .contContacto .textoImg .formulario .contenidoFormulario {
         height: 70%;
         justify-content: space-between; }
@@ -636,7 +671,7 @@ body {
     align-items: center; }
     .contContacto .textoImg .formulario {
       padding: 0.7rem;
-      width: 80%;
+      width: 70%;
       height: 65vh; }
     .contContacto .textoImg .contenidoFormulario {
       justify-content: space-between; }
